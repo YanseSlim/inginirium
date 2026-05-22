@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Курсы — Инжинириум МГТУ им. Н.Э. Баумана</title>
+  <meta name="description" content="Список инженерных курсов для детей и школьников в Инжинириум МГТУ им. Н.Э. Баумана">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title reveal">Курсы «Инжинириум МГТУ им. Н.Э. Баумана»</h1>
+    </div>
+  </section>
+
+  <!-- ===== FILTERS ===== -->
+  <section class="filters">
+    <div class="container">
+      <div class="filters__row">
+        <button class="filter-btn active" data-filter="all">Все курсы</button>
+        <button class="filter-btn" data-filter="preschool">Дошкольники</button>
+        <button class="filter-btn" data-filter="1-4">1-4 класс</button>
+        <button class="filter-btn" data-filter="5-8">5-8 класс</button>
+        <button class="filter-btn" data-filter="9-11">9-11 класс</button>
+        <button class="filter-btn" data-filter="online">Онлайн</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES GRID (data-driven) ===== -->
+  <section class="courses-grid">
+    <div class="container">
+      <div class="courses-grid__inner" id="all-courses"></div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-section__layout">
+        <div class="cta-section__content reveal-left">
+          <h2 class="cta-section__title">Поможем выбрать<br>подходящий курс за 5 минут</h2>
+          <p style="opacity:0.8; font-size:15px;">Оставьте номер телефона — мы перезвоним и ответим на все вопросы</p>
+        </div>
+        <div class="cta-section__form reveal-right">
+          <form>
+            <input type="text" name="name" placeholder="Ваше имя">
+            <input type="tel" name="phone" placeholder="Номер телефона *" required>
+            <input type="submit" value="Позвонить">
+          </form>
+          <div class="cta__consent" style="color:rgba(255,255,255,0.4);">
+            Нажимая на кнопку, вы принимаете <a href="/userconsent/" style="color:var(--primary);">«Согласие на обработку персональных данных»</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/courses-data.js"></script>
+  <script>
+    renderHeader('courses');
+    renderFooter();
+    renderCourses('#all-courses', coursesData);
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

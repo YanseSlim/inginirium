@@ -1,0 +1,10 @@
+# Системные файлы
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Редакторы
+*.swp
+*.swo
+.vscode/
+.idea/
